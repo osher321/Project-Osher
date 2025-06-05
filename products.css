@@ -1,0 +1,103 @@
+/* עיצוב גריד לרשימת המוצרים */
+.product-grid {
+    display: grid; /* הופך את הקונטיינר לגריד */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* יוצר עמודות בגודל דינמי */
+    gap: 20px; /* ריווח של 20px בין כל כרטיס */
+    justify-content: center; /* ממרכז את הכרטיסים בתוך הקונטיינר */
+    margin-top: 20px; /* מוסיף רווח מעל רשימת המוצרים */
+}
+
+/* עיצוב כללי לכרטיסי המוצר */
+.product {
+    background: white; /* רקע לבן לכל כרטיס */
+    padding: 20px; /* מרווח פנימי בתוך הכרטיס */
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* מוסיף צל עדין */
+    text-align: center; /* ממרכז את התוכן בתוך הכרטיס */
+}
+
+/* אפקט ריחוף כאשר המשתמש עובר עם העכבר על הכרטיס */
+.product:hover {
+    transform: translateY(-5px); /* מזיז את הכרטיס מעט כלפי מעלה */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* מחזק את הצל ליצירת אפקט הדגשה */
+}
+
+/* עיצוב כללי לכפתורים */
+.btn {
+    width: 100%; /* גורם לכל הכפתורים להיות ברוחב מלא */
+    font-size: 16px; /* מגדיל את גודל הפונט בכפתור */
+}
+
+.home-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+/* ✅ עיצוב רגיל לתמונת מוצר */
+.product-img {
+    width: 150px; /* תמונה קטנה יותר */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* צל עדין */
+    cursor: pointer; /* סמן של יד כדי להראות שהתמונה לחיצה */
+    transition: all 0.3s ease-in-out; /* אנימציה חלקה */
+}
+
+/* ✅ אפקט כשמעבירים עכבר על התמונה */
+.product-img:hover {
+    transform: scale(1.1); /* הגדלה קטנה */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* צל חזק יותר */
+    filter: brightness(1.1); /* הגברת הבהירות */
+    border-radius: 15px; /* עיגול פינות יותר חזק */
+}
+
+/* ✅ עיצוב המודל (חלון הפופ-אפ) */
+.modal {
+    display: none; /* מתחילים כשהמודל מוסתר */
+    position: fixed; /* המודל נשאר באותו מקום גם כשגוללים */
+    z-index: 1000; /* שכבה קדמית גבוהה כדי להבטיח שהמודל מעל כל האלמנטים */
+    left: 0;
+    top: 0;
+    width: 100%; /* המודל מכסה את כל המסך */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* רקע שחור שקוף */
+    justify-content: center; /* מרכז את התמונה אופקית */
+    align-items: center; /* מרכז את התמונה אנכית */
+}
+
+/* ✅ עיצוב התמונה בתוך הפופ-אפ */
+.modal-content {
+    max-width: 70%; /* מגביל את רוחב התמונה ל-90% מגודל המסך */
+    max-height: 90%; /* מגביל את גובה התמונה ל-90% מגודל המסך */
+    display: block; /* מוודא שהתמונה לא מושפעת מתכונות inline */
+    margin: auto; /* מרכז את התמונה בתוך הפופ-אפ */
+    border-radius: 10px; /* פינות מעוגלות עבור מראה חלק */
+}
+
+/* ✅ כפתור סגירה (X) */
+.close {
+    position: absolute; /* מאפשר מיקום חופשי בתוך הפופ-אפ */
+    top: 20px; /* ממקם את ה-X 20px מהחלק העליון */
+    right: 35px; /* ממקם את ה-X 35px מהחלק הימני */
+    color: white; /* צבע הכפתור X */
+    font-size: 40px; /* גודל גופן גדול ל-X */
+    font-weight: bold; /* הופך את ה-X לבולט יותר */
+    cursor: pointer; /* סמן עכבר בצורת יד (מציין שזה לחיץ) */
+}
+
+/* ✅ אפקט מעבר עדין כשהמודל מופיע */
+.modal-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✅ אנימציה להופעה הדרגתית של המודל */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); } /* מתחיל קטן ועמום */
+    to { opacity: 1; transform: scale(1); } /* מגיע לגודל מלא עם שקיפות מלאה */
+}
+
+

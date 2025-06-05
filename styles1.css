@@ -1,0 +1,206 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ניווט ראשי */
+.navbar {
+    display: flex;
+    justify-content: center; /* ממרכז את כל התוכן */
+    align-items: center; /* מוודא שהמילים באמצע הגובה */
+    background: linear-gradient(to right, #0d47a1, #1976d2);
+    padding: 15px 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* מכסה את כל הרוחב */
+    height: 60px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* רשימת הקישורים */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* ממרכז את הכפתורים */
+    align-items: center;
+    gap: 30px; /* ריווח גדול יותר בין הכפתורים */
+    margin: 0;
+    padding: 0;
+}
+
+/* עיצוב הקישורים */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px; /* ריווח פנימי */
+    white-space: nowrap; /* מונע מהמילים להישבר לשורה חדשה */
+}
+
+/* לוגו */
+.logo {
+    position: absolute;
+    right: 3em; /* ממקם את הלוגו בצד ימין */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* תפריט אייקון למובייל */
+.menu-icon {
+    display: none;
+    position: absolute;
+    left: 20px; /* ממקם את אייקון התפריט בצד שמאל */
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* רספונסיביות – תפריט נפתח במסכים קטנים */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #1976d2;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* תפריט אייקון למובייל */
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* רספונסיביות – תפריט נפתח בנייד */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #1976d2;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.parallax-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#section1 {
+    background-image: url('וילה עם בריכה ונוף לים.webp'); /* Replace with your image path */
+}
+
+#section2 {
+    background-image: url('תמונה מס2 וילה.webp'); /* Replace with your image path */
+}
+
+.content-section {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.content-section p {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 1.2em;
+}
+
+h1{
+    color: #fbfbfb; /* כחול כהה */
+    background-color: #11d3ec; /* טורקיז בהיר */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+body {
+    padding-bottom: 3em; /* הוסף מרווח שווה לגובה הפוטר */
+    margin: 0;
+}
+
+footer {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1.2em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #f9f9f9; /* רקע בהיר כדי להבליט את הפוטר */
+    padding: 0.5em 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* הצללה */
+    height: 1em; /* גובה מוגדר לפוטר */
+}
+
+footer a {
+    text-decoration: none;
+    color: #0073e6; /* צבע כחול דיפולטי */
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff6600; /* צבע כתום כאשר העכבר עליו */
+}
+
+.spacer {
+    height: 2em; /* רווח נוסף בין התוכן לפוטר */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: #11d3ec;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: 2px solid black;
+
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+
+

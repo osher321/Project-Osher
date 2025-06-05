@@ -1,0 +1,161 @@
+/* === הגדרת סגנון בסיסי לכל הדף === */
+body {
+    font-family: Arial, sans-serif; /* שימוש בפונט קריא ונפוץ */
+}
+
+/* === עיצוב החלק העליון (Header) === */
+header {
+    text-align: center; /* ממרכז את התוכן */
+    padding: 20px; /* ריווח פנימי */
+    background-color: #87CEEB; /* צבע רקע תכלת */
+    display: flex;
+    flex-direction: column; /* מסדר את התוכן בעמודה (תמונה מעל שם) */
+    align-items: center; /* ממרכז את כל האלמנטים */
+}
+
+/* === עיצוב תמונת הפרופיל === */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* תמונה עגולה */
+    margin-bottom: 10px; /* ריווח מתחת לתמונה */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* הצללה עדינה */
+}
+
+/* === עיצוב כותרות === */
+h1, h2 {
+    color: #333; /* צבע כהה לכותרות לשיפור הקריאות */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* הוספת צל עדין */
+}
+
+/* === עיצוב החלק "אודות" === */
+#bio {
+    background-color: #F0FFF0; /* רקע ירקרק בהיר */
+    padding: 15px; /* ריווח פנימי לנוחות הקריאה */
+    text-align: center; /* ממרכז את הטקסט */
+    font-size: 18px; /* גודל טקסט נוח לקריאה */
+    font-weight: bold; /* טקסט מודגש */
+}
+
+/* === אנימציה של הקלדה לטקסט באודות === */
+.typing-animation {
+    display: inline-block;
+    overflow: hidden; /* מונע גלילה של הטקסט לפני שהוקלד במלואו */
+    white-space: nowrap; /* שומר על רצף שורה אחד */
+    width: 0; /* מתחיל ללא רוחב */
+    border-right: 3px solid black; /* קו מהבהב כמו במקלדת */
+    animation: typing 2s steps(40) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* === עיצוב חלק "העבודות שלי" === */
+#work {
+    background-color: #F0F8FF; /* רקע תכלת עדין */
+    padding: 15px; /* ריווח פנימי */
+    display: flex; /* שימוש ב-Flexbox לסידור פרויקטים בשורה */
+    flex-wrap: wrap; /* אם אין מקום, יעברו לשורה הבאה */
+    justify-content: center; /* ממרכז את הכרטיסים */
+}
+
+/* === עיצוב כל כרטיס פרויקט === */
+.project-card {
+    width: 300px; /* רוחב קבוע לכל כרטיס */
+    margin: 10px auto; /* ריווח אחיד בין הפרויקטים */
+    text-align: center; /* ממרכז את התוכן בתוך הכרטיס */
+}
+
+.project-img {
+    width: 100%; /* רוחב מלא בכרטיס */
+    height: 200px; /* גובה קבוע לתמונות הפרויקטים */
+    object-fit: cover; /* שמירה על יחס תמונה נכון */
+    border-radius: 10px; /* פינות מעוגלות */
+    border: 3px solid black; /* מסגרת שחורה */
+    transition: transform 0.3s ease-in-out; /* אפקט תנועה לתמונה */
+}
+
+/* === הגדלת התמונה והוספת הצללה בעת ריחוף === */
+.project-card:hover {
+    transform: scale(1.05); /* מגדיל מעט את הכרטיס בזמן מעבר עכבר */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+/* === עיצוב תחתית הדף (Footer) === */
+footer {
+    background-color: #4682B4; /* צבע רקע כהה לכותרת התחתונה */
+    color: #FFF; /* טקסט לבן */
+    text-align: center; /* ממרכז את התוכן */
+    padding: 10px; /* ריווח פנימי */
+    font-size: 14px;
+}
+
+footer a {
+    color: #FFD700; /* צבע זהב לקישורים */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* === אפקט קפיצה לשם === */
+.pop-animation {
+    display: inline-block;
+    animation: pop 0.8s ease-in-out 1;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.3); }
+    60% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+/* ===כפתור תרגום === */
+
+.lang-switch {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.lang-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.95em;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.lang-button:hover {
+  background-color: #0056b3;
+}
+
+/* רספונסיביות */
+@media (max-width: 600px) {
+  .lang-button {
+    font-size: 0.85em;
+    padding: 8px 10px;
+  }
+
+  .lang-switch {
+    top: 10px;
+    left: 10px;
+  }
+}

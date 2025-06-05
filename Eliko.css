@@ -1,0 +1,356 @@
+/* 🌟 עיצוב כללי */
+body {
+    font-family: 'Arial', sans-serif; /* גופן ברירת מחדל */
+    margin: 0; /* מסיר רווחים חיצוניים */
+    padding: 0; /* מסיר רווחים פנימיים */
+    background-color: #f4f4f4; /* צבע רקע כללי */
+    color: #333; /* צבע טקסט */
+}
+
+/* 🎨 עיצוב ה-Header (כותרת עליונה) */
+header {
+    background: #4CAF50; /* צבע רקע ירוק */
+    color: white; /* צבע טקסט לבן */
+    padding: 15px 20px; /* ריווח פנימי */
+    display: flex; /* מציג את האלמנטים בשורה */
+    justify-content: space-between; /* מפזר את האלמנטים בין הצדדים */
+    align-items: center; /* מיישר אנכית */
+    position: relative; /* שומר על מבנה יחסי */
+}
+
+/* 🎯 עיצוב קונטיינר התוכן בכותרת */
+.header-content {
+    max-width: 1200px; /* מגביל את הרוחב */
+    margin: 0 auto; /* מרכז את התוכן */
+    display: flex; /* מסדר את האלמנטים בשורה */
+    justify-content: space-between; /* מפזר אותם בקצוות */
+    align-items: center; /* יישור אנכי */
+}
+
+/* 📌 כותרת ראשית בתוך ה-Header */
+header h1 {
+    font-size: 1.8em; /* גודל טקסט */
+    margin: 0; /* מסיר ריווח חיצוני */
+    flex-grow: 1; /* מרחיק את התפריט מהכותרת */
+}
+
+/* 🎨 עיצוב התפריט (Navbar) */
+.nav-list {
+    display: flex; /* פריטים בשורה */
+    gap: 40px; /* מרווחים בין פריטי התפריט */
+    list-style: none; /* מסיר עיצוב של נקודות */
+    padding: 0;
+    margin: 0;
+}
+
+/* 📌 עיצוב קישורים בתפריט */
+.nav-list li a {
+    text-decoration: none; /* מסיר קו תחתון */
+    color: white; /* צבע לבן */
+    font-size: 1.1em; /* גודל טקסט */
+    transition: 0.3s; /* אפקט מעבר */
+}
+
+/* 🎯 שינוי צבע בעת ריחוף */
+.nav-list li a:hover {
+    color: #ddd; /* אפקט שינוי צבע */
+}
+
+/* 🎨 כפתור תפריט המבורגר במובייל */
+.menu-toggle {
+    display: none; /* מוסתר בדסקטופ */
+    font-size: 2em; /* גודל כפתור */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer; /* מסמן שזה כפתור */
+}
+
+/* 🌟 אזור Hero */
+#hero {
+    position: relative;
+    background-image: url('זוג עם מיצוי צמחים.webp'); /* תמונת רקע */
+    background-size: cover; /* מכסה את כל הרקע */
+    background-position: center 20%; /* מיקום התמונה */
+    background-repeat: no-repeat;
+    height: 100vh; /* גובה מלא */
+    display: flex; /* ממרכז את התוכן */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 70px; /* דוחף את התוכן למטה */
+}
+
+/* 🎨 שכבת הצללה מעל תמונת הרקע */
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* לבן שקוף */
+}
+
+/* 🎯 עיצוב התוכן ב-Hero */
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.7); /* רקע כהה */
+    padding: 20px;
+}
+
+
+/* 📌 ממרכז את הכפתור מתחת למלל */
+.hero-button-container {
+    display: flex;
+    justify-content: center; /* ממקם את הכפתור באמצע */
+    margin-top: 20px; /* רווח למעלה */
+}
+
+/* 🔥 שינוי צבע והגדלה בעת מעבר עכבר או לחיצה במסכים גדולים */
+.hero-button:hover,
+.hero-button:focus {
+    background-color: #d64b2a; /* צבע כהה יותר */
+    color: #fff;
+    transform: scale(1.1); /* מגדיל מעט את הכפתור */
+    border-color: #fff; /* שינוי צבע המסגרת */
+}
+
+/* 🎯 שינוי אפקט בעת לחיצה */
+.hero-button:active {
+    transform: scale(1.05); /* מכווץ מעט כדי לתת אפקט לחיצה */
+    background-color: #c24a1e;
+}
+
+
+/* 🎨 עיצוב הכפתור */
+.hero-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ee6c4d; /* צבע רקע כתום */
+    color: white;
+    text-decoration: none;
+    border: 2px solid white; /* מסגרת לכפתור */
+    border-radius: 8px; /* מעגל פינות */
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer; /* מסמן שהכפתור לחיץ */
+}
+
+/* 🔥 שינוי צבע והגדלה בעת מעבר עכבר */
+.hero-button:hover {
+    background-color: #d64b2a; /* צבע כהה יותר */
+    color: #fff;
+    transform: scale(1.1); /* מגדיל מעט את הכפתור */
+    border-color: #fff; /* שינוי צבע המסגרת */
+}
+
+/* 🎯 שינוי אפקט בעת לחיצה */
+.hero-button:active {
+    transform: scale(1.05); /* מכווץ מעט כדי לתת אפקט לחיצה */
+    background-color: #c24a1e;
+}
+
+
+/* 🌟 עיצוב הסקשנים */
+section {
+    padding: 20px;
+    text-align: left;
+}
+
+#services, #contact {
+    background-color: #fff;
+}
+
+#about {
+    background-color: #f0f0f0;
+}
+
+/* 🎨 צבעי כותרות */
+#services h2 { color: #007bff; }
+#about h2 { color: #28a745; }
+#contact h2 { color: #dc3545; }
+
+.color1 {
+    color: #28a745; /* צבע ירוק */
+    font-weight: bold; /* הופך את הכותרת לעבה יותר */
+    font-size: 2em; /* מגדיל מעט את הכותרת */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* מוסיף הצללה עדינה */
+}
+
+
+/* 🎯 רשימות */
+#services ul, #contact p {
+    margin-left: 20px;
+}
+
+#services li {
+    margin-bottom: 10px;
+}
+
+/* 🎯 אפקט ריחוף */
+#services li:hover,
+#contact p:hover {
+    color: #0056b3;
+    cursor: pointer;
+}
+
+/* 🌟 כרטיסיות (Tabs) */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: #4CAF50;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tab-button {
+    background: #4CAF50;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    flex: 1;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+}
+
+.tab-button:hover, .tab-button.active {
+    background: #388E3C;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* מציג את הכרטיסייה הפעילה */
+.tab-content.active {
+    display: block;
+}
+
+/* 🌟 רשת מוצרים */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 🎯 סידור אזור הקשר */
+.contact-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* רווח בין התמונה לטקסט */
+}
+
+/* 🎯 טקסט */
+.contact-text {
+    flex: 1; /* תופס את כל השטח הזמין */
+}
+
+/* 🎯 תמונה */
+.contact-image img {
+    width: 300px; /* התאמת גודל התמונה */
+    height: auto;
+    border-radius: 10px; /* פינות מעוגלות */
+}
+
+/* 🌟 התאמות למובייל */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* מסדר את התמונה והמלל אחד מתחת לשני */
+        text-align: center;
+    }
+
+    .contact-image img {
+        width: 80px; /* מקטין את התמונה במובייל */
+    }
+}
+
+#hero::before {
+    pointer-events: none; /* מסיר שכבה מעל הכפתו וככה הכפתור הופך ללחיץ*/
+}
+
+/* 📌 כיוון טקסט עברי */
+.tab-content {
+    text-align: right; /* יישור הטקסט לימין */
+    direction: rtl; /* כיוון התוכן מימין לשמאל */
+}
+
+/* 📌 סידור הרשימות בעברית */
+.tab-content ul {
+    padding-right: 20px; /* רווח מצד ימין */
+    list-style: none; /* הסרת הסימון ברשימה */
+}
+
+.tab-content ul li {
+    text-align: right;
+    padding-right: 10px; /* ריווח נוסף כדי ליישר את המלל */
+}
+
+/* 📌 סידור המוצרים כך שיראו נכון ב-RTL */
+.product-grid {
+    direction: rtl;
+    text-align: right;
+}
+
+/* יישור התוכן לימין */
+.tab-content {
+    text-align: right;
+    direction: rtl;
+}
+
+/* סגנון לרשימה */
+.tab-content ul {
+    list-style: none; /* מסיר את הסימון של הרשימה */
+    padding-right: 0;
+}
+
+/* סגנון לפריטי הרשימה */
+.tab-content ul li {
+    font-size: 1.2em; /* גודל טקסט דומה ל-h5 */
+    margin-top: 10px; /* מוסיף רווח בין השורות */
+}
+/*לוגו*/
+.hero-logo {
+    width: 50px; /* גודל ברירת מחדל של הלוגו */
+    height: auto; /* שמירה על פרופורציות */
+    max-height: 50px; /* שלא יהיה גדול מדי */
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* הוספת צל */
+    transform: translateX(10px); /* הזזה ימינה */
+}
+
+/* 📱 התאמות למסכים קטנים */
+@media screen and (max-width: 768px) {
+    .hero-logo {
+        width: 40px; /* מקטין את הלוגו במובייל */
+        max-height: 40px;
+        border-radius: 8px; /* פינות מעוגלות קטנות יותר במסכים קטנים */
+        transform: translateX(5px); /* הזזה ימינה עדינה יותר */
+    }
+}
+
+/*לוגו גדל מעט וחוזר למקום*/
+.hero-logo:active {
+    animation: pop 0.5s ease-in-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(2); }
+    100% { transform: scale(1); }
+}

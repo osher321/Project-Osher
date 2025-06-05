@@ -1,0 +1,158 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    text-align: center;
+    direction: rtl;
+}
+
+header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+nav {
+    background-color: #003d5b; /* צבע רקע */
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #005f73;
+    border-radius: 5px;
+}
+
+.logo img {
+    width: 100px;
+    margin-right: 15px;
+    border-radius: 15px; /* פינות עגולות */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* צל */
+    border: 2px solid #ffffff; /* מסגרת לבנה */
+}
+
+
+
+h1 {
+    font-size: 2em;
+}
+
+.service {
+    margin: 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.service img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #1e3a8a;
+}
+
+.why-choose {
+    background-color: #dbeafe;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.reasons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reason {
+    background: white;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    width: 80%;
+    max-width: 400px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.reason span {
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+
+.contact {
+    padding: 20px;
+    background-color: #f0f8ff;
+}
+
+.contact button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #1e3a8a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #122f6d;
+}
+
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center; /* מיישר את הלוגו והכותרת לאותו גובה */
+    justify-content: center; /* מציב אותם באמצע */
+    gap: 15px; /* רווח בין הלוגו לכותרת */
+    padding: 10px;
+}
+
+.logo-img {
+    width: 100px; /* גודל הלוגו */
+    height: auto;
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.2)); /* צל עדין */
+    
+}
+
+/* ===כפתור תרגום === */
+

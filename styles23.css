@@ -1,0 +1,131 @@
+/*הכל*/
+*{
+    margin: 0;
+    padding: 0
+}
+
+
+/* עיצוב כללי */
+body {
+    font-family: Arial, sans-serif; /* קובע את הגופן הכללי של הדף */
+    margin: 0; /* מבטל רווח חיצוני של הדף */
+    padding: 0; /* מבטל רווח פנימי של הדף */
+    box-sizing: border-box; /* מוודא שחישוב הרוחב כולל ריווח פנימי ותיחום */
+    background-color: #f4f4f9;
+    line-height: 1.6;/*מרווח בין השורות*/
+}
+
+/* עיצוב סרגל הניווט */
+.navbar {
+    background-color: black; /* צבע רקע שחור */
+    color: white; /* צבע טקסט לבן */
+    display: flex; /* סידור פריטים בשורה */
+    justify-content: center; /* יישור הפריטים למרכז */
+    padding: 10px 0; /* ריווח פנימי לאורך ציר ה-Y */
+}
+
+.navbar a {
+    color: white; /* צבע הטקסט בקישורים */
+    text-decoration: none; /* ביטול קו תחתון בקישורים */
+    margin: 0 15px; /* רווח בין קישורים */
+    font-size: 18px; /* גודל הטקסט */
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* הוספת קו תחתון כשעוברים עם העכבר */
+}
+
+/* עיצוב אזור התוכן הראשי */
+.content {
+    text-align: center; /* יישור תוכן למרכז */
+    margin: 20px; /* ריווח חיצוני */
+}
+
+.content h1 {
+    font-size: 24px; /* גודל הכותרת */
+    margin-bottom: 10px; /* ריווח מתחת לכותרת */
+}
+
+.content p {
+    font-size: 18px; /* גודל הטקסט בפסקה */
+    margin-bottom: 20px; /* ריווח מתחת לפסקה */
+}
+
+.content img {
+    max-width: 40%; /* מגביל את רוחב התמונה ל-40% מהדף */
+    height: auto; /* שומר על פרופורציות התמונה */
+    margin-bottom: 20px; /* ריווח מתחת לתמונה */
+    border-radius: 15px; /* מעגל את פינות התמונה */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* מוסיף צל רך לתמונה */
+}
+
+h2 {
+    padding-left:24em; /* Subjects הזזת הטקסט 20 פיקסלים ימינה */
+  }
+  
+
+
+
+/* עיצוב מקטע הנושאים */
+.subjects-section {
+    background-color: black; /* צבע רקע שחור */
+    color: white; /* צבע טקסט לבן */
+    padding: 10px 0; /* ריווח פנימי לאורך ציר ה-Y */
+    text-align: center; /* יישור תוכן למרכז */
+    font-size: 18px; /* גודל הטקסט */
+}
+
+.subjects-table {
+    width: 90%; /* רוחב הטבלה */
+    margin: 20px auto; /* יישור למרכז */
+    border-collapse: collapse; /* איחוד מסגרות */
+    text-align: left; /* יישור טקסט לשמאל */
+    font-size: 16px; /* גודל טקסט */
+    color: #160101;
+}
+
+.subjects-table th, .subjects-table td {
+    border: 1px solid black; /* מסגרת שחורה לכל תא */
+    padding: 10px; /* ריווח פנימי */
+}
+
+.subjects-section th {
+    background-color: black; /* רקע שחור לכותרת */
+    color: white; /* טקסט לבן */
+    font-size: 18px; /* גודל טקסט לכותרת */
+    text-align: left; /* יישור טקסט למרכז */
+    padding: 15px; /* ריווח פנימי לכותרת */
+}
+
+.subjects-table tr:nth-child(even) td {
+    background-color: #f9f9f9; /* צבע רקע שונה לשורות זוגיות */
+} 
+
+
+
+.subjects div:first-letter {
+    text-transform: uppercase; /* האות הראשונה בכל פריט תהיה גדולה */
+}
+
+/* עיצוב כותרת תחתונה */
+footer {
+    background-color: black; /* צבע רקע שחור */
+    color: white; /* צבע טקסט לבן */
+    text-align: center; /* יישור תוכן למרכז */
+    padding: 10px 0; /* ריווח פנימי לאורך ציר ה-Y */
+    width: 100%; /* הכותרת משתרעת על כל רוחב הדף */
+    font-size: 14px; /* גודל הטקסט */
+
+}
+
+.email-link {
+    color: white; /* מגדיר את צבע הטקסט ללבן */
+    text-decoration: none; /* מבטל את הקו התחתון */
+    font-weight: bold; /* מגדיר טקסט מודגש */
+    font-size: 1.5em; /* גודל טקסט מוגדל */
+}
+
+.email-link:hover {
+    text-decoration: underline; /* מוסיף קו תחתון כשעוברים עם העכבר */
+}
+

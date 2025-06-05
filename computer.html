@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- קובע את קידוד התווים של הדף ל-UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- הופך את הדף לרספונסיבי -->
+    <title>my programming blog</title> <!-- כותרת הדף שתוצג בכרטיסיית הדפדפן -->
+    <link rel="stylesheet" href="styles23.css"> <!-- חיבור לקובץ CSS חיצוני לעיצוב הדף -->
+    <script src="main23.js" defer></script>
+
+</head>
+<body>
+    <!-- תפריט ניווט -->
+    <div  class="navbar"> <!-- עוטף את קישורי הניווט -->
+        <a href="#home">Home</a> <!-- קישור למקטע עם מזהה "home" -->
+        <a href="About.html">About</a> <!-- קישור לעמוד חדש עם מזהה "about" -->
+        <a href="#subjects">Subjects</a> <!-- קישור למקטע עם מזהה "subjects" -->
+        <a href="#contact">Contact</a> <!-- קישור למקטע עם מזהה "contact" -->
+    </div>
+
+  
+
+      <!-- מקטע תוכן ראשי -->
+    <section id="home">
+       <div class="content"> <!-- עוטף את התוכן הראשי -->
+          <h1>Welcome to My Programming Blog </h1> <!-- כותרת ראשית עם מזהה "home" -->
+          <p>This is a paragraph describing something interesting.</p> <!-- פסקה -->
+          <img src="0693d80a-8618-44af-8bf2-7c3efbe1ad39.webp" alt="Placeholder Image"> <!-- תמונה עם טקסט חלופי -->
+       </div>
+    </section>
+
+    <div>
+    <h2>Subjects</h2> <!-- כותרת משנית עם מזהה "subjects" -->
+    </div>
+    
+    <!-- מקטע נושאים -->
+    <section  id="about">
+      <table class="subjects-table"> <!-- טבלה להצגת הנושאים -->
+        <thead>
+            <tr class="subjects-section">
+                <th >Subjects </th> <!-- מישנה כותרת -->
+                <th>Sub-Subjects</th>
+            </tr>
+        </thead>
+        <tbody id="subjects">
+            <tr>
+                <td> <p>HTML</p></td> <!-- נושא ראשון -->
+                <td>elements, attributes, forms</td> <!-- תתי-נושאים של HTML -->
+            </tr>
+            <tr>
+                <td><p>CSS</p></td> <!-- נושא שני -->
+                <td>selector, properties, boxmodel</td> <!-- תתי-נושאים של CSS -->
+            </tr>
+            <tr>
+                <td><p>java script, java</p></td>
+                <td>variables, functions, constants</td>
+            </tr>
+        </tbody>
+     </table>
+   </section>
+    
+    
+    
+    <!-- כותרת תחתונה -->
+    <footer  id="contact">
+        <h1>Osher Asulin</h1> <!-- מזהה "about" -->
+        &copy; 2025 Osher Asulin 
+        <a href="mailto:osher.miz@gmail.com" class="email-link">osher.miz@gmail.com</a> <!-- קישור לחיץ -->
+    </footer>
+    
+    
+</body>
+</html>

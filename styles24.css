@@ -1,0 +1,156 @@
+/* איפוס סגנונות ברירת מחדל */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* עיצוב גוף הדף */
+body {
+    min-height: 100vh; /* מבטיח שהגוף ימלא את כל המסך */
+    background: rgb(251, 181, 229); /* צבע רקע ורדרד */
+    display: flex; /* שימוש ב-Flexbox למרכז את המחשבון */
+    justify-content: center;
+    align-items: center;
+}
+
+/* עיצוב המחשבון */
+.calculator {
+    width: 300px; /* רוחב המחשבון */
+    height: 500px; /* גובה המחשבון */
+    box-shadow: 4px 4px 30px rgba(0,0,0,0.2); /* הצללה עדינה */
+    border-radius: 12px; /* קצוות מעוגלים */
+    background: #222522; /* צבע רקע כהה */
+    overflow: hidden; /* מונע גלילה פנימית במקרה של חריגות */
+}
+
+/* עיצוב שדה התצוגה של המחשבון */
+form input {
+    width: 100%; /* רוחב מלא */
+    height: 150px; /* גובה תיבת התצוגה */ 
+    border: none; /* הסרת מסגרת ברירת מחדל */
+    border-radius: 12px; /* קצוות מעוגלים */
+    font-size: 2rem; /* גודל טקסט גדול */
+    padding: 1rem; /* ריווח פנימי */
+    color: #fff; /* צבע טקסט לבן */
+    background: #000; /* רקע שחור */
+    text-align: right; /* יישור טקסט לימין */
+    pointer-events: none; /* מונע מהמשתמש לערוך את הערך ישירות */
+}
+
+/* עיצוב קבוצה של הכפתורים */
+.button {
+    display: flex; /* שימוש ב-Flexbox */
+    flex-wrap: wrap; /* מאפשר שבירת שורות */
+    justify-content: space-between; /* מרווח אחיד בין הכפתורים */
+    padding: 20px;
+}
+
+/* עיצוב כללי לכפתורים */
+button {
+    flex: 0 0 22%; /* גודל יחסי של הכפתור */
+    margin: 5px 0; /* מרווח בין הכפתורים */
+    border: 1px solid #000; /* מסגרת דקה */
+    width: 60px; /* רוחב קבוע */
+    height: 52px; /* גובה קבוע */
+    font-size: 22px; /* גודל גופן */
+    font-weight: 600; /* טקסט מודגש */
+    border-radius: 5px; /* פינות מעוגלות */
+    cursor: pointer; /* סמן עכבר משתנה ליד */
+    
+}
+
+/* עיצוב לכפתורים של פעולות מתמטיות */
+.btn-yellow {
+    background: rgb(245, 146, 62); /* צבע כתום */
+    color: #fff;
+}
+
+/* עיצוב לכפתורים של מספרים */
+.btn-grey {
+    background: rgb(224, 224, 224); /* רקע אפור בהיר */
+    color: #000;
+}
+
+/* עיצוב לכפתור השווה (=) */
+.btn-equal {
+    background: green; /* צבע ירוק */
+    color: #fff;
+}
+
+/* עיצוב לכפתור מחיקת כל הנתונים (C) */
+.btn-clear {
+    background: red; /* צבע אדום */
+    color: #fff;
+}
+
+
+
+/* עיצוב לכפתור מחיקת תו אחד (←) */
+#btn-backspace {
+    background: #ffa502; /* צבע כתום */
+    color: white;
+    font-size: 22px; /* גודל טקסט */
+    font-weight: bold;
+    width: 60px;
+    height: 52px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s; /* אנימציה קלה ללחיצה */
+}
+
+/* אפקט לחיצה על כפתור -> מחיקה */
+#btn-backspace:hover {
+    background: #e67e22; /* צבע כהה יותר בלחיצה */
+    transform: scale(1.1);
+}
+
+#btn-backspace:active {
+    opacity: 0; /* הכפתור -> יהפוך לבלתי נראה בזמן הלחיצה */
+    transition: opacity 0.1s ease-in-out;
+}
+
+
+/* עיצוב השם OSHER במחשבון */
+#osher-name {
+    font-size: 20px; /* גודל גופן */
+    font-weight: bold; /* טקסט מודגש */
+    color: white; /* צבע טקסט לבן */
+    background: #222; /* רקע כהה */
+    padding: 10px 15px; /* ריווח פנימי */
+    border-radius: 8px; /* קצוות מעוגלים */
+    text-align: center; /* יישור למרכז */
+    display: flex; /* שימוש ב-Flexbox */
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    filter: brightness(1.1); /* מגביר בהירות ב-10% */
+    transform: scale(1.05); /* הגדלה קלה */
+    transition: all 0.2s ease-in-out; /* שינוי חלק */
+}
+
+.btn-yellow:hover {
+    background: rgb(237, 119, 8); /* שינוי קל של הצבע */
+}
+
+.btn-grey:hover {
+    background: rgb(147, 146, 146); /* שינוי קל */
+}
+
+.btn-equal:hover {
+    background: #6ef66e; /* שינוי ירוק כהה יותר */
+}
+
+.btn-clear:hover {
+    background: #f53434; /* שינוי אדום כהה יותר */
+}
+
+#btn-backspace:hover {
+    background: #e67e22; /* שינוי כתום כהה יותר */
+}
+
+
+
+

@@ -1,0 +1,230 @@
+/* עיצוב כללי */
+body {
+    font-family: 'Heebo', sans-serif; /* שימוש בפונט עברי נקי */
+    direction: rtl; /* יישור הטקסט מימין לשמאל */
+    text-align: center; /* יישור תוכן המרכזי */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #c2e9fb, #a1c4fd); /* רקע בגווני כחול-תכלת */
+    color: #0d47a1; /* צבע טקסט כללי */
+}
+
+/* כותרת ראשית */
+header {
+    padding: 40px 15px;
+    background: linear-gradient(to right, #0d47a1, #1976d2); /* רקע גרדיאנט לכותרת */
+    color: white; /* צבע טקסט לבן */
+    border-radius: 0 0 20px 20px; /* פינות מעוגלות לתחתית הכותרת */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* הצללה קלה לכותרת */
+}
+
+h1 {
+    font-size: 2.5em; /* גודל כותרת ראשית */
+    margin-bottom: 10px; /* ריווח מתחת לכותרת */
+}
+
+/* קרוסלה */
+.carousel-container {
+    max-width: 27%; /* רוחב הקרוסלה מוגבל ל-27% מרוחב הדף */
+    margin: 30px auto; /* ממרכז את הקרוסלה */
+    padding: 15px; /* ריווח פנימי */
+}
+
+/* שקופיות בקרוסלה */
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* ממרכז את הכרטיסים בתוך השקופית */
+    align-items: center; /* ממקם את הכרטיסים באמצע אנכית */
+}
+
+/* כרטיסים */
+.card {
+    background: white;
+    border-radius: 15px; /* פינות מעוגלות לכרטיס */
+    text-align: center;
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    border: 2px solid #1976d2; /* מסגרת כחולה לכרטיס */
+    box-shadow: none; /* מסיר הצללה מהכרטיס */
+}
+
+/* תמונות בתוך הכרטיס */
+.card img {
+    width: 100%; /* התמונה תופסת את כל רוחב הכרטיס */
+    height: auto;
+    max-height: 250px; /* גובה תמונה מקסימלי */
+    object-fit: cover; /* שומר על יחסי התמונה מבלי לעוות */
+    border-radius: 12px; /* פינות מעוגלות לתמונה */
+    margin-bottom: 10px; /* ריווח מתחת לתמונה */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* הצללה רק על התמונה */
+}
+
+/* אפקט בהצבעת עכבר על תמונה */
+.card img:hover {
+    transform: scale(1.05); /* מגדיל מעט את התמונה */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* צל חזק יותר בהובר */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* אנימציה חלקה */
+}
+
+/* יצירת קשר */
+.contact {
+    background: white;
+    border-radius: 15px; /* פינות מעוגלות לכרטיס */
+    padding: 25px;
+    max-width: 500px;
+    margin: 40px auto; /* ממרכז את הכרטיס */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* הצללה עדינה */
+    border: 2px solid #1976d2; /* מסגרת כחולה */
+}
+
+.contact h2 {
+    color: #0d47a1; /* צבע כותרת ליצירת קשר */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.contact a {
+    font-weight: bold;
+    color: #1976d2;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline; /* קו תחתון בהובר */
+}
+
+/* טופס יצירת קשר */
+.contact-form {
+    background: white;
+    border-radius: 15px; /* פינות מעוגלות */
+    padding: 30px;
+    max-width: 500px;
+    margin: 40px auto; /* ממורכז מתחת לקרוסלה */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* הצללה עדינה */
+    border: 2px solid #1976d2; /* מסגרת כחולה */
+    text-align: center;
+}
+
+.contact-form h2 {
+    color: #0d47a1;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* עיצוב התוויות (Labels) */
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+/* עיצוב שדות הקלט */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #1976d2;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* עיצוב הכפתור */
+.contact-form button {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #0d47a1; /* שינוי צבע בעת מעבר עכבר */
+}
+
+/* מיכל הסרטון */
+.video-container {
+    display: flex;
+    justify-content: center; /* ממקם את הסרטון באמצע הדף */
+    align-items: center;
+    margin-top: 20px; /* ריווח מעל הקרוסלה */
+}
+
+/* עיצוב הסרטון */
+.video-container video {
+    width: 80%; /* הסרטון יתפוס 80% מרוחב הדף */
+    max-width: 800px; /* הגבלת גודל מרבי */
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* הוספת הצללה */
+}
+
+
+/* עיצוב כפתור חזרה לעמוד הבית */
+.back-home {
+    text-align: center; /* ממקם את הכפתור במרכז */
+    margin-top: 20px; /* מוסיף ריווח מעל הכפתור */
+}
+
+.btn-home {
+    display: inline-block;
+    background: #1976d2; /* צבע כחול */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-home:hover {
+    background: #0d47a1; /* צבע כהה יותר בהובר */
+}
+
+
+
+/* עיצוב פוטר */
+footer {
+    background: #0d47a1;
+    color: white;
+    padding: 15px;
+    font-size: 1.1em;
+    border-radius: 20px 20px 0 0; /* פינות מעוגלות לפוטר */
+    margin-top: 40px; /* מרחיק מהתוכן שמעליו */
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* מקטין כותרת ראשית במסכים קטנים */
+    }
+
+    .carousel-container {
+        max-width: 95%; /* הקרוסלה תתפוס כמעט את כל הרוחב במסכים קטנים */
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px; /* מגביל רוחב כרטיס במסכים קטנים */
+        padding: 15px;
+    }
+
+    .card img {
+        max-height: 220px; /* מקטין גובה תמונות במסכים קטנים */
+    }
+
+    .contact {
+        width: 90%;
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+}
