@@ -27,33 +27,26 @@ h1, h2 {
     color: #333; /* צבע כהה לכותרות לשיפור הקריאות */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* הוספת צל עדין */
 }
-
 /* === עיצוב החלק "אודות" === */
-#bio {
-    background-color: #F0FFF0; /* רקע ירקרק בהיר */
-    padding: 15px; /* ריווח פנימי לנוחות הקריאה */
-    text-align: center; /* ממרכז את הטקסט */
-    font-size: 18px; /* גודל טקסט נוח לקריאה */
-    font-weight: bold; /* טקסט מודגש */
-}
-
-/* === אנימציה של הקלדה לטקסט באודות === */
 .typing-animation {
-    display: inline-block;
-    overflow: hidden; /* מונע גלילה של הטקסט לפני שהוקלד במלואו */
-    white-space: nowrap; /* שומר על רצף שורה אחד */
-    width: 0; /* מתחיל ללא רוחב */
-    border-right: 3px solid black; /* קו מהבהב כמו במקלדת */
-    animation: typing 2s steps(40) forwards, blink 0.7s infinite;
+    display: inline;
+    white-space: normal;
+    animation: fadeIn 1s ease-in-out both;
+   
+}
+#bio {
+    background-color: #f0fff0; /*ירוק מנטה */
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
 
-@keyframes blink {
-    50% { border-color: transparent; }
+/* אנימציה רגילה */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* === עיצוב חלק "העבודות שלי" === */
